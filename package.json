@@ -1,0 +1,12 @@
+{
+    "name": "gestor_de_eventos",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "concurrently \"npm:dev:back\" \"npm:dev:front\"",
+        "dev:front": "cd frontend && npm run dev",
+        "dev:back": "cd backend && mvn spring-boot:run"
+    },
+    "devDependencies": {
+        "concurrently": "^7.6.0"
+    }
+}
