@@ -8,7 +8,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,11 +28,11 @@ public class Evento {
     @Column(name = "id_event")
     private Long idEvento;
 
-    @ManyToMany
+    @ManyToOne
     @JoinColumn(name = "id_tag", referencedColumnName = "id_tag")
-    private Tag idTag;
+    private Tag tag;
 
-    @Column(name = "nome_event")
+    @Column(name = "nome_event", nullable = false)
     private String nomeEvento;
 
     @Column(name = "data")

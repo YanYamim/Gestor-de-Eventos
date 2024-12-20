@@ -6,7 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.IdClass;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,13 +19,13 @@ import lombok.Setter;
 public class TagCategoria {
     
     @Id
-    @ManyToMany
+    @ManyToOne
     @JsonIgnore
     @JoinColumn(name = "id_tag")
     private Tag tagId;
 
     @Id
-    @ManyToMany
+    @ManyToOne
     @JsonIgnore
     @JoinColumn(name = "id_cat")
     private Categoria catId;

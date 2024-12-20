@@ -6,7 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.IdClass;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,14 +19,14 @@ import lombok.Setter;
 public class CidadeEvento {
     
     @Id
-    @ManyToMany
+    @ManyToOne
     @JsonIgnore
     @JoinColumn(name = "id_cid")
-    private Long cidId;
+    private Cidade cidId;
 
     @Id
-    @ManyToMany
+    @ManyToOne
     @JsonIgnore
     @JoinColumn(name = "id_event")
-    private Long idEvento;
+    private Evento idEvento;
 }
