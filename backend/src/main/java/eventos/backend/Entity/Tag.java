@@ -28,7 +28,7 @@ public class Tag {
     private Long tagId;
 
     @Column(name = "nome_tag")
-    private String nome_tag;
+    private String tagNome;
 
     @OneToMany
     private Set<Evento> eventos;
