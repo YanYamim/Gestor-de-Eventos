@@ -17,7 +17,7 @@ public class TagService {
         this.tagRepository = tagRepository;
     }
 
-    public Tag preCadastradasags(Long tagId, String tagNome) {
+    public Tag preCadastradas(Long tagId, String tagNome) {
         Tag novaTag = new Tag();
         novaTag.setTagNome("Festa");
         novaTag.setTagNome("Rock");
