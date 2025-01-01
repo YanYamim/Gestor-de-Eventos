@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import eventos.backend.Entity.Perfil;
 import eventos.backend.Interfaces.PerfilRepository;
+import jakarta.transaction.Transactional;
 
 @Service
 public class CadastroService {
@@ -15,7 +16,8 @@ public class CadastroService {
         this.perfilRepository = perfilRepository;
     }
 
-    public Perfil cadastrarPerfil(Perfil perfil) {
-        return perfilRepository.save(perfil);
+    @Transactional
+    public Perfil cadastrarPerfil(Perfil novoPerfil) {
+        return perfilRepository.save(novoPerfil);
     }
 }
